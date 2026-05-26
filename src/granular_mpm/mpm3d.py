@@ -487,3 +487,11 @@ class SandMPM3D:
     def positions(self) -> np.ndarray:
         wp.synchronize()
         return self.x.numpy()
+
+    def velocities(self) -> np.ndarray:
+        wp.synchronize()
+        return self.v.numpy()
+
+    def plastic_volume(self) -> np.ndarray:
+        wp.synchronize()
+        return self.Jp.numpy()
